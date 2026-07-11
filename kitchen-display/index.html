@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kitchen-app">
+        <header class="header">
+            <h1>👨‍🍳 Kitchen Orders</h1>
+            <div class="stats">
+                <span>Active: <strong id="active-count">0</strong></span>
+                <span class="new-badge">New: <strong id="new-count">0</strong></span>
+            </div>
+        </header>
+        
+        <div id="orders-container" class="orders-grid">
+            <p class="no-orders">Waiting for orders...</p>
+        </div>
+        
+        <div id="alert" class="alert-overlay" style="display:none;">
+            <div class="alert-box">
+                <div class="alert-icon">🔔</div>
+                <h2>NEW ORDER!</h2>
+                <p id="alert-message"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
